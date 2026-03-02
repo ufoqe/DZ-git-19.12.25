@@ -3,21 +3,18 @@ package main
 import "fmt"
 
 func main() {
-	var a [12][12]string
 
-	for i := 0; i < 12; i++ {
-		for j := 0; j < 12; j++ {
+	var c int
+	fmt.Println("Введите размерность шахматной доски: ")
+	fmt.Scan(&c)
+
+	for i := 0; i < c; i++ {
+		for j := 0; j < c; j++ {
 			if (i+j)%2 == 0 {
-				a[i][j] = "  "
+				fmt.Print("   ")
 			} else {
-				a[i][j] = "#"
+				fmt.Print("#")
 			}
-		}
-	}
-
-	for i := 0; i < 12; i++ {
-		for j := 0; j < 12; j++ {
-			fmt.Print(a[i][j])
 		}
 		fmt.Println()
 	}
